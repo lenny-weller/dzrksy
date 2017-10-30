@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>达州瑞康医院</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/acdLunbo.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="head">
+    <div class="innerHead clearfloat">
+        <p class="headLeft">达州瑞康，男人的医院</p>
+        <p class="headLeft headRight">节假日不休，24小时咨询热线0818-5852873</p>
+    </div>
+</div>
+<div class="navLine">
+    <div class="innerNav clearfloat">
+        <div class="hospital_logo">
+            <img src="./image/yylogo.gif" alt="">
+        </div>
+        <div class="navList clearfloat">
+            <ul>
+                <li>网站首页</li>
+                <li>医院简介</li>
+                <li>先进技术</li>
+                <li>专家团队</li>
+                <li>预约挂号</li>
+                <li>来院路线</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section id="main_ad" class="carousel slide" data-ride="carousel">
+    <!-- 活动指示器 -->
+    <ol class="carousel-indicators">
+        <li data-target="#main_ad" data-slide-to="0" class="active"></li>
+        <li data-target="#main_ad" data-slide-to="1"></li>
+    </ol>
+    <!-- 轮播项 -->
+    <div class="carousel-inner" role="listbox">
+        <a href="#" class="item active" data-image-lg="image/banner1.jpg" data-image-xs="img/slide_01_640x340.jpg"></a>
+        <a href="#" class="item" data-image-lg="image/banner2.jpg" data-image-xs="img/slide_02_640x340.jpg"></a>
+    </div>
+    <!-- 控制按钮 -->
+    <a class="left carousel-control" href="#main_ad" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#main_ad" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</section>
+<script>
+    $(function() {
+        /**
+         * 根据屏幕宽度的变化决定轮播图片应该展示什么 5    */
+        function resize() {
+            // 获取屏幕宽度
+            var windowWidth = $(window).width();
+            // 判断屏幕属于大还是小
+            var isSmallScreen = windowWidth < 768;
+            // 根据大小为界面上的每一张轮播图设置背景
+            $('#main_ad > .carousel-inner > .item').each(function(i, item) {
+                var $item = $(item);
+                // var imgSrc = $item.data(isSmallScreen ? 'image-xs' : 'image-lg');
+                var imgSrc =
+                        isSmallScreen ? $item.data('image-xs') : $item.data('image-lg');
+                // 设置背景图片
+                $item.css('backgroundImage', 'url("' + imgSrc + '")');
+                //
+                // 因为我们需要小图时 尺寸等比例变化，所以小图时我们使用img方式
+                if (isSmallScreen) {
+                    $item.html('<img src="' + imgSrc + '" alt="" />');
+                } else {
+                    $item.empty();
+                }
+            });
+        }
+        // // 让window对象立即触发一下resize，初始化div的背景图
+        // $(window).trigger('resize');
+
+
+        $(window).on('resize', resize).trigger('resize');
+    });
+</script>
+<div class="symSolve clearfloat">
+    <div class="symLeft">
+        <p class="sym_tit">症状解答</p>
+        <p class="e_tit">SYMPTOMS TO SOLVE</p>
+    </div>
+    <div class="symList clearfloat">
+        <ul>
+            <li><a href="#">龟头敏感</a></li>
+            <li><a href="#" style="border-top:1px solid #bfbfbf">射精障碍</a></li>
+            <li><a href="#" style="border-top:1px solid #bfbfbf">阴茎长疙瘩</a></li>
+            <li><a href="#" style="border-top:1px solid #bfbfbf">尿频尿急尿痛</a></li>
+            <li><a href="#" style="border-top:1px solid #bfbfbf">睾丸痛</a></li>
+            <li><a href="#" style="border-left:1px solid #bfbfbf">勃起无力</a></li>
+            <li><a href="#">精液带血</a></li>
+            <li><a href="#">尿道口流脓</a></li>
+            <li><a href="#">生殖器长水泡</a></li>
+            <li><a href="#">精液发黄</a></li>
+            <li><a href="#" style="border-left:1px solid #bfbfbf">射精过快</a></li>
+            <li><a href="#">龟头长红点</a></li>
+            <li><a href="#">勃起硬度差</a></li>
+            <li><a href="#">尿道有分泌物</a></li>
+            <li><a href="#">小便刺痛</a></li>
+        </ul>
+    </div>
+</div>
+<div class="treatRange symSolve clearfloat">
+    <div class="treatLeft symLeft">
+        <p class="sym_tit">诊疗范围</p>
+        <p class="e_tit">SYMPTOMS TO SOLVE</p>
+    </div>
+    <div class="rangeList clearfloat">
+        <ul>
+            <li>
+                <img src="./image/icon1.gif" alt=""><p class="rangeName">性功能检查</p>
+                <div class="rangeCover">
+                    <p class="s_tit">性功能检查</p>
+                    <div class="fl_list clearfloat">
+                        <p><a href="#">阳痿早泄</a></p>
+                        <p><a href="#">射精障碍</a></p>
+                        <p><a href="#">勃起异常</a></p>
+                        <p><a href="#">更多</a></p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="./image/icon2.gif" alt=""><p class="rangeName">生殖整形</p>
+                <div class="rangeCover">
+                    <p class="s_tit">生殖整形</p>
+                    <div class="fl_list clearfloat">
+                        <p><a href="#">包皮过长</a></p>
+                        <p><a href="#">包茎</a></p>
+                        <p><a href="#">阴茎短小</a></p>
+                        <p><a href="#">更多</a></p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="./image/icon3.gif" alt=""><p class="rangeName">前列腺疾病</p>
+                <div class="rangeCover">
+                    <p class="s_tit">前列腺疾病</p>
+                    <div class="fl_list clearfloat">
+                        <p><a href="#">前列腺增生</a></p>
+                        <p><a href="#">前列腺炎</a></p>
+                        <p><a href="#">前列腺囊中</a></p>
+                        <p><a href="#">更多</a></p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="./image/icon4.gif" alt=""><p class="rangeName">男性不育症</p>
+                <div class="rangeCover">
+                    <p class="s_tit">男性不育症</p>
+                    <div class="fl_list clearfloat">
+                        <p><a href="#">无精症</a></p>
+                        <p><a href="#">死精症</a></p>
+                        <p><a href="#">弱精症</a></p>
+                        <p><a href="#">更多</a></p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="./image/icon5.gif" alt=""><p class="rangeName">性传播疾病</p>
+                <div class="rangeCover">
+                    <p class="s_tit">性功能检查</p>
+                    <div class="fl_list clearfloat">
+                        <p><a href="#">尖锐湿疣</a></p>
+                        <p><a href="#">淋病</a></p>
+                        <p><a href="#">梅毒</a></p>
+                        <p><a href="#">更多</a></p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="./image/icon6.gif" alt=""><p class="rangeName">泌尿生殖感染</p>
+                <div class="rangeCover">
+                    <p class="s_tit">性功能检查</p>
+                    <div class="fl_list clearfloat">
+                        <p><a href="#">尿道炎</a></p>
+                        <p><a href="#">龟头炎</a></p>
+                        <p><a href="#">膀胱炎</a></p>
+                        <p><a href="#">更多</a></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="big_tit clearfloat">
+    <p class="titLeft">新闻资讯</p>
+    <p class="titRight">ACADEMIC EXCHANGE</p>
+    <img src="./image/xx.png" alt="">
+</div>
+<div class="academic">
+    <div class="innerAcd">
+        <div class="acdLunbo">
+            <ul class="imgList">
+                <li class="clearfloat">
+                    <div class="acdImg"><img src="./image/lb1tu3.jpg" alt=""><span>学术交流</span></div>
+                    <div class="acdTxt">
+                        <p class="at1">达州瑞康医院特别注重学术交流，今年也照例参加了四川省中西医结合男科学术交流大会。这次会议由四川省中医药学会、四川省中西医结合学会主办，规模空前宏大，会上许多学术界泰斗都发表了讲话。</p>
+                        <p class="at1 at2">我院泌尿科张主任也在会上阐述了自己的观点和多年临床经验的心得，受到与会者的高度赞扬和认可<a href="#">...[详细]</a></p>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <div class="acdImg"><img src="./image/lb1tu1.jpg" alt=""><span>医院动态</span></div>
+                    <div class="acdTxt">
+                        <p class="s_tit">达州瑞康医院坚持贯彻服务“3原则”</p>
+                        <p class="at3 clearfloat"><b>1.</b><span>患者至上：将患者利益放在首位，充分尊重患者的人格与尊严、尊重患者的个人隐私权与知情同意权。</span></p>
+                        <p class="at3 clearfloat"><b>2.</b><span>绿色医疗：为患者就诊提供大方便，实行“无假日医院”建立以病人为中心的科学布局和便捷就医的合理流程，实现全程导医服务的绿色通道。</span></p>
+                        <p class="at3 clearfloat"><b>3.</b><span>人文服务：视患者为亲人，从患者舒心、方便、安全、满意的服务出发，倡导“一患、一医、一护”的绿色护理理念<a href="#">...[详细]</a></span></p>
+                    </div>
+                </li>
+                <li class="clearfloat">
+                    <div class="acdImg"><img src="./image/lb1tu2.jpg" alt=""><span>健康咨询</span></div>
+                    <div class="acdTxt">
+                        <p class="at1">随着现代社会竞争越来越激烈，压力越来越大，生活节奏不断的加快，作为家庭的主力男性的健康问题日益突出，据联合国人口组织多年调查统计表明： 男性平均寿命比女性的要短5-10年，并且随着时间的推移，仍在上涨。</p>
+                        <p class="at1 at2">男科疾病一般是阳痿，早泄，男性不育，前列腺及男性泌尿生殖系统疾病的统称。现实生活中有50%的男性患有不同程度的男科疾病<a href="#">...[详细]</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="demo" class="acdGd">
+            <table cellspacing="0" cellpadding="0" style="border: 0;">
+                <tr>
+                    <td id="marquePic1" class="acdList">
+                        <table style="border: 0;" cellpadding="0" cellspacing="0">
+                            <tr class="innerGd clearfloat">
+                                <td><img src="./image/gdtu1.jpg" alt=""></td>
+                                <td><img src="./image/gdtu2.jpg" alt=""></td>
+                                <td><img src="./image/gdtu3.jpg" alt=""></td>
+                                <td><img src="./image/gdtu4.jpg" alt=""></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td id="marquePic2" class="acdList"></td>
+                </tr>
+            </table>
+        </div>
+        <script type=text/javascript>
+                var speed=20
+                marquePic2.innerHTML=marquePic1.innerHTML
+                function Marquee(){
+                    if(demo.scrollLeft>=marquePic1.scrollWidth){
+                        demo.scrollLeft=0
+                    }else{
+                        demo.scrollLeft++
+                    }}
+                var MyMar=setInterval(Marquee,speed)
+                demo.onmouseover=function() {clearInterval(MyMar)}
+                demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+        </script>
+        <div class="lisList clearfloat">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="btnLeft"></div>
+        <div class="btnRight"></div>
+    </div>
+</div>
+<div class="big_tit clearfloat">
+    <p class="titLeft">先进技术</p>
+    <p class="titRight">ADVANCED TECHNIQUE</p>
+    <img src="./image/xx.png" alt="">
+</div>
+<div class="advTech">
+    <div class="innerAdvtech">
+        <p class="advTit">我们服务的宗旨</p>
+        <p class="advTxt1">一切从患者角度出发，一切为患者着想！</p>
+        <p class="advTxt1 advTxt2">我们拥有丰富的男科诊疗经验，国内外先进技术，致力于为男性健康服务。</p>
+    </div>
+</div>
+<div class="treatBox clearfloat">
+    <div class="boxLeft">
+        <ul>
+            <li class="clearfloat on">
+                <div class="lisName">早泄</div>
+                <div class="lisDes">早泄脱敏治疗<br>性生活延长15-20分钟<span></span></div>
+            </li>
+            <li class="clearfloat">
+                <div class="lisName">阳痿</div>
+                <div class="lisDes">九步培元疗法<br>改善勃起硬度，延长勃起时间<span></span></div>
+            </li>
+            <li class="clearfloat">
+                <div class="lisName">包皮包茎</div>
+                <div class="lisDes">分型综合疗法<br>1个疗程告别尿频尿急<span></span></div>
+            </li>
+            <li class="clearfloat">
+                <div class="lisName">前列腺炎</div>
+                <div class="lisDes">韩式包皮环切手术<br>不留疤痕，外型美观整齐<span></span></div>
+            </li>
+            <li class="clearfloat">
+                <div class="lisName">炎症感染</div>
+                <div class="lisDes">光导治疗系统<br>检测治疗恢复，后续不再复发<span></span></div>
+            </li>
+            <li class="clearfloat">
+                <div class="lisName">男性不育</div>
+                <div class="lisDes">六步怀孕疗法<br>临床成功率高<span></span></div>
+            </li>
+        </ul>
+    </div>
+    <div class="boxRight">
+        <ul>
+            <li>
+                <p class="br1">早泄脱敏治疗</p>
+                <p class="br2"><span>适用症状：</span>做爱时间短、射精过快</p>
+                <p class="br2"><span>治疗结果：</span>性生活延长15-20分钟</p>
+                <p class="br2 br3"><span>治疗方法：</span>模拟阴道环境，对龟头进行反复冲击摩擦，降低性神经敏感度提高射精阀值，达到治疗早泄的目的。</p>
+            </li>
+            <li>
+                <p class="br1">九步培元疗法</p>
+                <p class="br2"><span>适用症状：</span>阴茎勃起无力、阴茎无法勃起</p>
+                <p class="br2"><span>治疗结果：</span>改善勃起硬度，延长勃起时间</p>
+                <p class="br2 br3"><span>治疗方法：</span>经医生特殊手法，进行九步按摩，促进药物吸收。搭配男性康复治疗仪，进行负压水疗和脉冲仪电极理疗，科学治疗阳痿。</p>
+            </li>
+            <li>
+                <p class="br1">分型综合疗法</p>
+                <p class="br2"><span>适用症状：</span>尿频尿急尿痛，排尿不畅</p>
+                <p class="br2"><span>治疗结果：</span>1个疗程告别尿频尿急</p>
+                <p class="br2 br3"><span>治疗方法：</span>借助声、光、电、温度、水等各种物理因素治疗前列腺疾病，避免血管、神经损伤误操作，不影响正常性功能及生育功能。</p>
+            </li>
+            <li>
+                <p class="br1">韩式包皮环切手术</p>
+                <p class="br2"><span>适用症状：</span>包皮过长，包茎</p>
+                <p class="br2"><span>治疗结果：</span>不留疤痕，美观整齐</p>
+                <p class="br2 br3"><span>治疗方法：</span>韩式包皮环切手术常用器械切除术，切缘整齐，只有微量出血，愈合快；还有一种激光刀切除术，出血很少或不出血，效果很好。</p>
+            </li>
+            <li>
+                <p class="br1">光导治疗系统</p>
+                <p class="br2"><span>适用症状：</span>龟头炎，龟头红肿，尿道炎，龟头长疙瘩</p>
+                <p class="br2"><span>治疗结果：</span>消除炎症，提高免疫力，不复发</p>
+                <p class="br2 br3"><span>治疗方法：</span>根据男性炎症的致病机理，推出光导治疗系统，在精选药物的配合下，能够很好的治疗睾丸炎、龟头炎、尿道炎等泌尿系感染疾病。</p>
+            </li>
+            <li>
+                <p class="br1">六步怀孕疗法</p>
+                <p class="br2"><span>适用症状：</span>弱精，无精，死精，射精障碍</p>
+                <p class="br2"><span>治疗结果：</span>可以成功孕育小宝宝</p>
+                <p class="br2 br3"><span>治疗方法：</span>采用分型对症，辩证施治，运用中西医技术，结合现代最新治疗设备，治疗效果显著，为许多家庭解决生小孩“难”的问题。</p>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $('.boxLeft').find('li').click(function(){
+            var index = $(this).index();
+            $(this).addClass('on').siblings().removeClass('on');
+            $('.boxRight').find('li').eq(index).show().siblings().hide();
+        })
+    </script>
+    <div class="boxLink">
+        <p class="num1"><i>1.</i> 问你想问，专家为你解答</p>
+        <div class="numLink clearfloat">
+            <a href="#">这个治疗方法适合我吗？</a>
+            <a href="#">治疗费用是多少？</a>
+        </div>
+        <p class="num1 num2"><i>2.</i> 你现在是处于：</p>
+        <div class="numLink numLink2 clearfloat">
+            <a href="#">症状不明，未确证</a>
+            <a href="#">确诊未治疗</a>
+            <a href="#">久治不愈，反复发作</a>
+        </div>
+    </div>
+</div>
+<div class="big_tit clearfloat">
+    <p class="titLeft">专家团队</p>
+    <p class="titRight">EXPERT TEAM</p>
+    <img src="./image/xx.png" alt="">
+</div>
+<div class="docTeam">
+    <div class="docLunbo">
+        <ul class="docList">
+            <li>
+                <h1>张 鹏</h1>
+                <p class="d1">20年临床经验</p>
+                <p class="d2">达州瑞康泌尿科主任</p>
+                <p class="d3 clearfloat"><span>擅长：</span>早泄、阳痿、泌尿生殖感染等病症</p>
+                <p class="d3 clearfloat d4"><span>患者评价：</span>对待患者如亲人、尽心尽责。</p>
+                <div class="d5 d3"><span>资质荣誉：</span><p>多次应邀出席国内权威泌尿男性疾病学会会议。</p></div>
+            </li>
+            <li>
+                <h1>王武生</h1>
+                <p class="d1">30年临床经验</p>
+                <p class="d2" style="padding-bottom: 15px">达州瑞康特邀执业医师</p>
+                <div class="d3 clearfloat"><span>擅长：</span><p>中西结合诊治性功能障碍、前列腺、男性不育等病症。</p></div>
+                <div class="d4 d3 clearfloat"><span>患者评价：</span><p>医术高超，与人随和，尽职尽责</p></div>
+                <div class="d5 d3" style="margin-top: 15px"><span>资质荣誉：</span><p>曾在《中华泌尿外科》杂志、《中华男科学》等刊物发表专业学术论文十余篇。</p></div>
+            </li>
+            <li>
+                <h1>周苏智</h1>
+                <p class="d1">30年临床经验</p>
+                <p class="d2">达州瑞康特邀执业医师</p>
+                <div class="d3 clearfloat"><span>擅长：</span><p>性功能障碍、前列腺疾病、尿尿感染等疾病</p></div>
+                <div class="d3 clearfloat d4"><span>患者评价：</span><p>医德高尚，医术精湛，为人很热情</p></div>
+                <div class="d5 d3"><span>资质荣誉：</span><p>多次应邀出席国内权威泌尿男性疾病学会会议。</p></div>
+            </li>
+        </ul>
+    </div>
+    <div class="prev"></div>
+    <div class="next"></div>
+</div>
+<div class="link clearfloat">
+    <ul>
+        <li><a href="#">与专家一对一私密交流，快速就诊</a></li>
+        <li><a href="#"><img src="./image/tel.gif" alt="">0818-5852873 在线问诊</a></li>
+    </ul>
+</div>
+<div class="big_tit clearfloat">
+    <p class="titLeft">医院活动</p>
+    <p class="titRight">HOSPITAL ACTIVITY</p>
+    <img src="./image/xx.png" alt="">
+</div>
+<div class="activity">
+    <div class="picLeft img"><img src="./image/hdtu1.jpg" alt=""></div>
+    <div class="picLeft picMid img"><img src="./image/hdtu2.jpg" alt=""></div>
+    <div class="picLeft picRight">
+        <div class="img"><img src="./image/hdtu3.jpg" alt=""></div>
+        <div class="img i2"><img src="./image/hdtu4.jpg" alt=""></div>
+    </div>
+</div>
+<div class="big_tit clearfloat">
+    <p class="titLeft">网络预约</p>
+    <p class="titRight">NETWORK RESERVATION</p>
+    <img src="./image/xx.png" alt="">
+</div>
+<div class="netDate">
+    <div class="dateLeft">
+        <div class="wsbLogo"><img src="./image/wsblogo.gif" alt=""></div>
+        <p class="wsbTxt1">瑞康医院贯彻执行卫生部</p>
+        <p class="wsbTxt2">诚信医院施行网络挂号服务</p>
+        <p class="wsbTxt3">网络预约四大优惠：</p>
+        <div class="wsbTxt4">
+            <ol>
+                <li>1.到医院优先就诊，免排队</li>
+                <li>2.网络预约，可当天看专家</li>
+                <li>3.一医一患一诊室，全程病情保密</li>
+                <li>4.护士全程陪同，就医无障碍更贴心</li>
+            </ol>
+        </div>
+        <div class="wsbTel">
+            <img src="./image/tel2.gif" alt="">
+            咨询电话 <span>0818-5852873</span>
+        </div>
+        <img src="./image/yz.png" alt="" class="wsbYz">
+    </div>
+    <div class="dateRight">
+        <p class="tit1">20秒预约挂号，当天可享受专家诊断，免排队</p>
+        <p class="tit2">为方便广大患者就医，切实解决“看病难”问题，达州瑞康医院坚决落实“一切以病人</p>
+        <div class="table clearfloat">
+            <ul>
+                <li>
+                    <span>姓名：</span><br>
+                    <input type="text" value="请输入您的姓名" style="color:#999;" onfocus="if(value=='请输入您的姓名'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入您的姓名'}">
+                </li>
+                <li>
+                    <span>手机：</span><br>
+                    <input type="text" value="请输入您的电话号码" style="color:#999;" onfocus="if(value=='请输入您的电话号码'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入您的电话号码'}">
+                </li>
+                <li>
+                    <span>症状：</span><br>
+                    <select name="" style="color:#999;">
+                        <option value="射精疼痛">射精疼痛</option>
+                        <option value="射精疼痛">射精疼痛</option>
+                        <option value="射精疼痛">射精疼痛</option>
+                        <option value="射精疼痛">射精疼痛</option>
+                        <option value="射精疼痛">射精疼痛</option>
+                    </select>
+                </li>
+                <li>
+                    <span>描述：</span><br>
+                    <textarea  placeholder="请简单描述你的病情" style="color:#999;" onfocus="if(placeholder=='请简单描述你的病情'){this.style.color='#000';placeholder=''}" onblur="if(placeholder==''){this.style.color='#999';placeholder='请简单描述你的病情'}"></textarea>
+                </li>
+            </ul>
+        </div>
+        <button>提交在线挂号</button>
+        <p class="botTxt"><span>温馨提示：</span>我院收到您的信息后，会及时发出预约号及详细来院路线到您的手机，请注意查收！</p>
+    </div>
+</div>
+<div class="botNav">
+    <div class="innerBotnav clearfloat">
+        <ul>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">医院简介</a></li>
+            <li><a href="#">先进技术</a></li>
+            <li><a href="#">专家团队</a></li>
+            <li><a href="#">预约挂号</a></li>
+            <li><a href="#">来院路线</a></li>
+        </ul>
+    </div>
+</div>
+<div class="foot">
+    <div class="innerFoot clearfloat">
+        <div class="footLeft">
+            <img src="./image/dzrklogo.jpg" alt="">
+            <p class="hosName">达州瑞康医院</p>
+            <p class="eName">DAZHOU RUIKANG  HOSPITAL</p>
+        </div>
+        <div class="footMid footLeft">
+            <p class="footTxt1">出诊时间：08:00-20:00（节假日不休息）</p>
+            <p class="footTxt1">医院地址：达州市通川区通川北路 2号附4号房</p>
+            <p class="footTxt1">工信部备案号：蜀ICP备13012744号-1</p>
+            <p class="footTxt1">网站信息仅供参考，不能作为诊断及医疗的依据</p>
+        </div>
+        <div class="footRight footLeft">
+            <div class="conList clearfloat">
+                <ul>
+                    <li>
+                        <div class="icon"><img src="./image/zx1.gif" alt=""></div>
+                        <p>医患交流</p>
+                    </li>
+                    <li>
+                        <div class="icon"><img src="./image/zx2.gif" alt=""></div>
+                        <p>在线咨询</p>
+                    </li>
+                    <li>
+                        <div class="icon"><img src="./image/zx3.gif" alt=""></div>
+                        <p>网上挂号</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="connect"><img src="./image/connect.gif" alt=""></div>
+        </div>
+    </div>
+</div>
+<div class="fixNav navLine">
+    <div class="innerNav clearfloat">
+        <div class="hospital_logo">
+            <img src="./image/yylogo.gif" alt="">
+        </div>
+        <div class="navList clearfloat">
+            <ul>
+                <li>网站首页</li>
+                <li>医院简介</li>
+                <li>先进技术</li>
+                <li>专家团队</li>
+                <li>预约挂号</li>
+                <li>来院路线</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        var height = $(".symSolve").offset().top;
+        $(window).scroll(function(){
+            var this_scrollTop = $(this).scrollTop();
+            if(this_scrollTop>height ){
+                $(".fixNav").fadeIn("slow");
+            }else {
+                $(".fixNav").fadeOut("slow");
+            }
+        });
+    });
+</script>
+</body>
+</html>
